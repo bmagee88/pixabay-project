@@ -22,8 +22,6 @@ const ImageViewer = () => {
     if (!imagesReady) {
       return;
     }
-    
-    console.log("image viewer", images);
   }, [imagesReady, images]);
 
   return (

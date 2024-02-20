@@ -42,11 +42,9 @@ const MainPage = () => {
   // useEffect(() => {
   //   const fetchImages = async () => {
   //     let url = `${localhost}/category?category=${category}&page=${page}&per_page=${PER_PAGE}`;
-  //     console.log(url);
   //     const response = await fetch(url);
   //     const data = await response.json();
   //     dispatch(setImages(data.hits))
-  //     console.log(data.hits);
   //   };
   //   fetchImages();
   // }, [localhost, category, page, dispatch]);
@@ -73,7 +71,6 @@ const MainPage = () => {
       });
       const data = await response.json();
       dispatch(setImages(data))
-      console.log(data);
     };
     if (sortKey === undefined || orderAsc === undefined) return;
     sortImagesFetch();
