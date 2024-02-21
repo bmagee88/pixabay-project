@@ -9,8 +9,6 @@ const SelectList = ({ list }) => {
   return (
     <div>
       {list.map((item) => {
-        // const fontWeight = selectedItem === item.name ? "800" : "500" ;
-        const fontWeight = 500;
         return (
           <Button
             key={item.id}
@@ -23,7 +21,7 @@ const SelectList = ({ list }) => {
             <Typography
               key={item.id}
               id={item.id}
-              sx={{ mt: 2, fontWeight: fontWeight }}
+              sx={{ mt: 2, fontWeight: 500 }}
             >
               {item.name}
             </Typography>

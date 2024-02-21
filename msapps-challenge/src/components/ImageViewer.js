@@ -44,7 +44,6 @@ const ImageViewer = () => {
             <Grid
               item
               key={image.id}
-              // xs={4}
               xs={12}
               sm={8}
               md={6}

@@ -18,7 +18,6 @@ const style = {
 const MainPage = () => {
   const category = useSelector((state) => state.category.value);
   const page = useSelector((state) => state.page.value);
-  // const images = useSelector((state) => state.images.value);
 
   const dispatch = useDispatch();
 
