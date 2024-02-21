@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setImages } from "../state/image/imageSlice";
 import { fetchImages, manageSort } from "../api/api";
 
-
-
 const style = {
   minWidth: "360px",
   margin: "auto",
@@ -31,7 +29,6 @@ const MainPage = () => {
     };
     getImages();
   }, [category, page, dispatch]);
-
 
   const [sortKey, setSortKey] = useState("id");
   const [orderAsc, setOrderAsc] = useState(false);
@@ -57,6 +54,15 @@ const MainPage = () => {
           }}
         >
           id
+        </Button>
+        <Button
+          sx={buttonSelectStyle(sortKey, "previewURL")}
+          variant="contained"
+          onClick={() => {
+            setSortKey("previewURL");
+          }}
+        >
+          date
         </Button>
         <Button
           sx={buttonSelectStyle(sortKey, "user")}
@@ -101,8 +107,7 @@ const MainPage = () => {
         <NextButton />
       </Box>
       <ImageViewer />
-      <CategoryModal
-      />
+      <CategoryModal />
     </Box>
   );
 };
