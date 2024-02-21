@@ -8,7 +8,9 @@ const PrevButton = () => {
   const page = useSelector((state) => state.page.value);
   const dispatch = useDispatch();
   return (
-    <Button variant='contained' onClick={()=>
+    <Button variant='contained' 
+    disabled={page-1 <= 0 ? true: false}
+    onClick={()=>
     dispatch(decrement())
     }>
       Prev page {" "}{page <= 1 ? "-": page - 1}
