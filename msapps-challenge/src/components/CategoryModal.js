@@ -1,10 +1,9 @@
 import { Box, Modal, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import SelectList from "./SelectList";
 import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../state/page/pageSlice";
 import {
-  toggleCategoryModal,
   toggleCategoryModalClose,
 } from "../state/modal/categoryModalSlice";
 
