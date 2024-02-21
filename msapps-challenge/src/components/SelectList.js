@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { setCategory } from "../state/category/categorySlice";
 import { toggleCategoryModalClose } from "../state/modal/categoryModalSlice";
+import { reset } from "../state/page/pageSlice";
 
 const SelectList = ({ list }) => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const SelectList = ({ list }) => {
             onClick={() => {
               dispatch(setCategory(item.name));
               dispatch(toggleCategoryModalClose());
+              dispatch(reset())
             }}
           >
             <Typography
