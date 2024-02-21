@@ -6,10 +6,10 @@ const categoryModalSlice = createSlice({
   name: "categoryModal",
   initialState,
   reducers: {
-    toggleCategoryModalOpen (state) {
+    toggleCategoryModalOpen: (state) => {
       state.isOpen = true;
     },
-    toggleCategoryModalClose (state) {
+    toggleCategoryModalClose: (state) => {
       state.isOpen = false;
     },
   },
